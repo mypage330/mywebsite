@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+
+<!-- Mobile Responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Raksha Bandhan ❤️</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+
+        font-family: "Segoe UI", sans-serif;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* IMPORTANT: Mobile par scroll ke liye */
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        padding: 30px 0;
+
+        background: linear-gradient(
+            135deg,
+            #ff9a9e,
+            #fad0c4,
+            #ffd1ff
+        );
+    }
+
+    .container {
+        width: 90%;
+        max-width: 650px;
+
+        text-align: center;
+
+        padding: 35px 20px;
+        margin: 20px auto;
+
+        border-radius: 25px;
+
+        background: rgba(255,255,255,0.25);
+
+        backdrop-filter: blur(12px);
+
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+
+        animation: appear 1.5s ease;
+    }
+
+    .rakhi {
+        font-size: 90px;
+
+        animation: rotate 3s infinite ease-in-out;
+    }
+
+    h1 {
+        margin-top: 10px;
+
+        font-size: 42px;
+
+        color: #9b1c31;
+
+        text-shadow:
+        2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        margin-top: 12px;
+
+        color: #7b2430;
+
+        font-size: 25px;
+    }
+
+    p {
+        margin-top: 20px;
+
+        font-size: 19px;
+
+        line-height: 1.7;
+
+        color: #4a1f25;
+    }
+
+    button {
+        margin-top: 25px;
+
+        padding: 13px 28px;
+
+        border: none;
+
+        border-radius: 30px;
+
+        background: #e63950;
+
+        color: white;
+
+        font-size: 18px;
+
+        cursor: pointer;
+
+        box-shadow:
+        0 5px 15px rgba(0,0,0,0.2);
+
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+
+        background: #b91d35;
+    }
+
+    #message {
+        margin-top: 20px;
+
+        font-size: 21px;
+
+        font-weight: bold;
+
+        color: #9b1c31;
+
+        display: none;
+
+        animation: fade 1s ease;
+
+        line-height: 1.6;
+    }
+
+    .heart {
+        position: fixed;
+
+        bottom: -50px;
+
+        font-size: 25px;
+
+        animation: float 6s linear infinite;
+
+        opacity: 0.8;
+
+        pointer-events: none;
+    }
+
+    .heart:nth-child(1) {
+        left: 10%;
+        animation-delay: 1s;
+    }
+
+    .heart:nth-child(2) {
+        left: 25%;
+        animation-delay: 3s;
+    }
+
+    .heart:nth-child(3) {
+        left: 45%;
+        animation-delay: 2s;
+    }
+
+    .heart:nth-child(4) {
+        left: 65%;
+        animation-delay: 4s;
+    }
+
+    .heart:nth-child(5) {
+        left: 85%;
+        animation-delay: 1.5s;
+    }
+
+
+    /* Floating Hearts */
+
+    @keyframes float {
+
+        0% {
+            transform:
+            translateY(0)
+            rotate(0deg);
+
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 1;
+        }
+
+        100% {
+            transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+            opacity: 0;
+        }
+    }
+
+
+    /* Rakhi Animation */
+
+    @keyframes rotate {
+
+        0%,100% {
+            transform:
+            rotate(-8deg)
+            scale(1);
+        }
+
+        50% {
+            transform:
+            rotate(8deg)
+            scale(1.12);
+        }
+    }
+
+
+    /* Page Animation */
+
+    @keyframes appear {
+
+        from {
+            opacity: 0;
+
+            transform:
+            scale(0.7);
+        }
+
+        to {
+            opacity: 1;
+
+            transform:
+            scale(1);
+        }
+    }
+
+
+    /* Message Animation */
+
+    @keyframes fade {
+
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    /* =========================
+       MOBILE RESPONSIVE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+        body {
+
+            /* Mobile par top se start hoga */
+            align-items: flex-start;
+
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+
+        .container {
+
+            width: 90%;
+
+            padding:
+            25px 15px;
+
+            margin:
+            10px auto 30px;
+        }
+
+
+        .rakhi {
+
+            font-size: 65px;
+        }
+
+
+        h1 {
+
+            font-size: 30px;
+
+            line-height: 1.3;
+        }
+
+
+        h2 {
+
+            font-size: 19px;
+
+            line-height: 1.5;
+
+            margin-top: 15px;
+        }
+
+
+        p {
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            margin-top: 18px;
+        }
+
+
+        button {
+
+            font-size: 16px;
+
+            padding:
+            12px 24px;
+
+            margin-top: 20px;
+        }
+
+
+        #message {
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        .heart {
+
+            font-size: 20px;
+        }
+    }
+
+
+    /* Extra small mobile */
+
+    @media (max-width: 380px) {
+
+        .container {
+
+            width: 92%;
+
+            padding:
+            22px 12px;
+        }
+
+
+        .rakhi {
+
+            font-size: 55px;
+        }
+
+
+        h1 {
+
+            font-size: 26px;
+        }
+
+
+        h2 {
+
+            font-size: 17px;
+        }
+
+
+        p {
+
+            font-size: 15px;
+        }
+
+
+        #message {
+
+            font-size: 16px;
+        }
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- Floating Hearts -->
+
+<div class="heart">❤️</div>
+<div class="heart">💖</div>
+<div class="heart">💕</div>
+<div class="heart">💗</div>
+<div class="heart">❤️</div>
+
+
+<!-- Main Container -->
+
+<div class="container">
+
+
+    <div class="rakhi">
+        🪷
+    </div>
+
+
+    <h1>
+        Happy Raksha Bandhan ❤️
+    </h1>
+
+
+    <h2>
+        भाई-बहन के पवित्र रिश्ते को समर्पित
+    </h2>
+
+
+    <p>
+
+        प्यारी बहना, तुम्हारे साथ बिताया हर पल खास है।
+
+        <br>
+
+        हमारी नोक-झोंक और प्यार हमेशा यूँ ही बना रहे। ❤️
+
+        <br><br>
+
+        <b>
+            रक्षा बंधन की हार्दिक शुभकामनाएँ!
+        </b>
+
+    </p>
+
+
+    <button onclick="showMessage()">
+
+        💝 Special Message
+
+    </button>
+
+
+    <div id="message">
+
+        भाई-बहन का रिश्ता दुनिया का सबसे खूबसूरत रिश्ता है! 🥰
+
+        <br>
+
+        हमेशा खुश रहो और मुस्कुराते रहो ❤️
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+function showMessage() {
+
+    document.getElementById("message").style.display = "block";
+
+}
+
+</script>
+
+
+</body>
+</html>
