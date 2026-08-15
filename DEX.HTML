@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Happy Independence Day 🇮🇳</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff0dc 0%,
+            #ffffff 50%,
+            #e8f5e9 100%
+        );
+
+    padding:20px 0 40px;
+}
+
+
+/* =========================
+   FLOATING EMOJIS
+========================= */
+
+.particle{
+    position:fixed;
+    bottom:-50px;
+    font-size:24px;
+    z-index:1;
+    pointer-events:none;
+
+    animation:
+        floatUp 8s linear infinite;
+}
+
+.p1{
+    left:7%;
+    animation-delay:0s;
+}
+
+.p2{
+    left:22%;
+    animation-delay:2s;
+}
+
+.p3{
+    left:42%;
+    animation-delay:4s;
+}
+
+.p4{
+    left:63%;
+    animation-delay:1s;
+}
+
+.p5{
+    left:82%;
+    animation-delay:3s;
+}
+
+.p6{
+    left:94%;
+    animation-delay:5s;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:
+            translateY(0)
+            rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-115vh)
+            rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    position:relative;
+    z-index:2;
+
+    width:92%;
+    max-width:720px;
+
+    margin:15px auto;
+
+    padding:30px 22px 35px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,0.80);
+
+    box-shadow:
+        0 12px 40px
+        rgba(0,0,0,0.18);
+
+    backdrop-filter:blur(8px);
+
+    animation:
+        containerShow 1.2s ease;
+}
+
+@keyframes containerShow{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(35px)
+            scale(.92);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================
+   INDIA EMOJI
+========================= */
+
+.flag-emoji{
+
+    font-size:75px;
+    line-height:1;
+
+    animation:
+        emojiWave 2s ease-in-out infinite;
+}
+
+@keyframes emojiWave{
+
+    0%,100%{
+        transform:rotate(-5deg);
+    }
+
+    50%{
+        transform:rotate(5deg);
+    }
+}
+
+
+/* =========================
+   HAPPY INDEPENDENCE DAY
+========================= */
+
+h1{
+
+    margin-top:18px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:48px;
+
+    font-weight:900;
+
+    font-style:italic;
+
+    line-height:1.25;
+
+    letter-spacing:.5px;
+
+    background:
+        linear-gradient(
+            to bottom,
+
+            #ff9933 0%,
+            #ff9933 33.33%,
+
+            #ffffff 33.33%,
+            #ffffff 66.66%,
+
+            #138808 66.66%,
+            #138808 100%
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+    color:transparent;
+
+    filter:
+        drop-shadow(
+            0 3px 3px
+            rgba(0,0,0,.25)
+        );
+
+    animation:
+        titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.04);
+    }
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle{
+
+    margin-top:15px;
+
+    font-size:23px;
+
+    font-weight:bold;
+
+    color:#333;
+
+    line-height:1.5;
+}
+
+
+/* =================================================
+     NORMAL WAVING TIRANGA
+================================================= */
+
+.flag{
+
+    position:relative;
+
+    width:340px;
+    height:200px;
+
+    margin:40px auto 30px;
+
+    transform-style:preserve-3d;
+
+    perspective:900px;
+
+    filter:
+        drop-shadow(
+            0 18px 15px
+            rgba(0,0,0,.30)
+        );
+
+    animation:
+        cinematicFlag 4s ease-in-out infinite;
+
+    overflow:hidden;
+}
+
+
+/* =========================
+   FLAG STRIPES
+========================= */
+
+.stripe{
+
+    position:absolute;
+
+    left:0;
+
+    width:100%;
+
+    height:66.66px;
+
+    transform-style:preserve-3d;
+
+    background-size:200% 100%;
+
+    animation:
+        flagWave 2.8s ease-in-out infinite;
+}
+
+
+/* =========================
+   SAFFRON
+========================= */
+
+.saffron{
+
+    top:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d96b12 0%,
+            #ff9933 25%,
+            #ffc078 45%,
+            #ff9933 65%,
+            #d96b12 100%
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            90% 92%,
+            80% 82%,
+            70% 72%,
+            60% 70%,
+            50% 76%,
+            40% 88%,
+            30% 100%,
+            20% 94%,
+            10% 82%,
+            0 72%
+        );
+}
+
+
+/* =========================
+   WHITE
+========================= */
+
+.white{
+
+    top:66px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dcdcdc 0%,
+            #ffffff 25%,
+            #ffffff 48%,
+            #e8e8e8 70%,
+            #ffffff 100%
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            90% 91%,
+            80% 82%,
+            70% 72%,
+            60% 70%,
+            50% 76%,
+            40% 88%,
+            30% 100%,
+            20% 94%,
+            10% 82%,
+            0 72%
+        );
+}
+
+
+/* =========================
+   GREEN
+========================= */
+
+.green{
+
+    top:132px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #086b05 0%,
+            #138808 25%,
+            #43a047 45%,
+            #138808 65%,
+            #086b05 100%
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            90% 88%,
+            80% 78%,
+            70% 68%,
+            60% 70%,
+            50% 80%,
+            40% 92%,
+            30% 100%,
+            20% 92%,
+            10% 80%,
+            0 70%
+        );
+}
+
+
+/* =================================================
+   ASHOKA CHAKRA
+================================================= */
+
+.ashoka{
+
+    position:absolute;
+
+    z-index:20;
+
+    width:52px;
+    height:52px;
+
+    border:
+        4px solid #000080;
+
+    border-radius:50%;
+
+    top:74px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    box-shadow:
+        0 0 5px
+        rgba(0,0,128,.4);
+
+    animation:
+        chakraSpin 6s linear infinite;
+}
+
+
+/* Chakra vertical */
+
+.ashoka::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+    height:100%;
+
+    background:#000080;
+
+    left:50%;
+    top:0;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* Chakra horizontal */
+
+.ashoka::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:4px;
+
+    background:#000080;
+
+    left:0;
+    top:50%;
+
+    transform:
+        translateY(-50%);
+}
+
+
+/* Extra spokes */
+
+.spoke{
+
+    position:absolute;
+
+    width:3px;
+    height:100%;
+
+    background:#000080;
+
+    left:50%;
+    top:0;
+}
+
+.spoke1{
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+}
+
+.spoke2{
+
+    transform:
+        translateX(-50%)
+        rotate(90deg);
+}
+
+.spoke3{
+
+    transform:
+        translateX(-50%)
+        rotate(135deg);
+}
+
+
+/* =================================================
+   CINEMATIC FLAG MOVEMENT
+================================================= */
+
+@keyframes cinematicFlag{
+
+    0%,100%{
+
+        transform:
+            perspective(900px)
+            rotateY(0deg)
+            rotateZ(0deg)
+            skewY(0deg)
+            scaleX(1);
+    }
+
+    25%{
+
+        transform:
+            perspective(900px)
+            rotateY(-8deg)
+            rotateZ(-1deg)
+            skewY(1deg)
+            scaleX(1.02);
+    }
+
+    50%{
+
+        transform:
+            perspective(900px)
+            rotateY(7deg)
+            rotateZ(1deg)
+            skewY(-1deg)
+            scaleX(.98);
+    }
+
+    75%{
+
+        transform:
+            perspective(900px)
+            rotateY(-5deg)
+            rotateZ(1deg)
+            skewY(1deg)
+            scaleX(1.015);
+    }
+}
+
+
+@keyframes flagWave{
+
+    0%,100%{
+        background-position:0% 0;
+    }
+
+    50%{
+        background-position:100% 0;
+    }
+}
+
+
+@keyframes chakraSpin{
+
+    from{
+
+        transform:
+            translateX(-50%)
+            rotate(0deg);
+    }
+
+    to{
+
+        transform:
+            translateX(-50%)
+            rotate(360deg);
+    }
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message{
+
+    margin-top:25px;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    color:#333;
+}
+
+.highlight{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#d84315;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    margin-top:28px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff9933,
+            #ffffff,
+            #138808
+        );
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 6px 18px
+        rgba(0,0,0,.22);
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:scale(1.08);
+}
+
+
+/* =========================
+   SPECIAL MESSAGE
+========================= */
+
+#special{
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,153,51,.20),
+            rgba(255,255,255,.85),
+            rgba(19,136,8,.20)
+        );
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#333;
+
+    animation:
+        messageShow .8s ease;
+}
+
+@keyframes messageShow{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top:35px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    color:#555;
+
+    line-height:1.7;
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media(max-width:600px){
+
+    body{
+
+        padding-top:10px;
+        padding-bottom:35px;
+    }
+
+
+    .container{
+
+        width:94%;
+
+        margin:10px auto;
+
+        padding:
+            25px 13px 30px;
+
+        border-radius:25px;
+    }
+
+
+    .flag-emoji{
+
+        font-size:60px;
+    }
+
+
+    h1{
+
+        font-size:34px;
+
+        line-height:1.3;
+    }
+
+
+    .subtitle{
+
+        font-size:19px;
+
+        line-height:1.5;
+    }
+
+
+    /* Mobile 3D Flag */
+
+    .flag{
+
+        width:285px;
+
+        height:170px;
+
+        margin-top:35px;
+    }
+
+
+    .stripe{
+
+        height:56px;
+    }
+
+
+    .white{
+
+        top:56px;
+    }
+
+
+    .green{
+
+        top:112px;
+    }
+
+
+    .ashoka{
+
+        width:44px;
+
+        height:44px;
+
+        top:63px;
+    }
+
+
+    .message{
+
+        font-size:16px;
+
+        line-height:1.8;
+    }
+
+
+    .highlight{
+
+        font-size:23px;
+    }
+
+
+    button{
+
+        font-size:16px;
+
+        padding:
+            12px 23px;
+    }
+
+
+    #special{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+        padding:18px;
+    }
+
+
+    .footer{
+
+        font-size:15px;
+    }
+}
+
+
+/* =================================================
+   VERY SMALL MOBILE
+================================================= */
+
+@media(max-width:380px){
+
+    h1{
+
+        font-size:29px;
+    }
+
+
+    .flag{
+
+        width:245px;
+
+        height:150px;
+    }
+
+
+    .stripe{
+
+        height:50px;
+    }
+
+
+    .white{
+
+        top:50px;
+    }
+
+
+    .green{
+
+        top:100px;
+    }
+
+
+    .ashoka{
+
+        width:38px;
+
+        height:38px;
+
+        top:56px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- Floating Decorations -->
+
+<div class="particle p1">🇮🇳</div>
+<div class="particle p2">🧡</div>
+<div class="particle p3">💚</div>
+<div class="particle p4">🇮🇳</div>
+<div class="particle p5">🧡</div>
+<div class="particle p6">💚</div>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<div class="container">
+
+
+    <!-- India Flag Emoji -->
+
+    <div class="flag-emoji">
+        🇮🇳
+    </div>
+
+
+    <!-- Heading -->
+
+    <h1>
+        Happy Independence Day
+    </h1>
+
+
+    <div class="subtitle">
+        15 अगस्त • स्वतंत्रता दिवस
+    </div>
+
+
+    <!-- =========================
+         3D CINEMATIC TIRANGA
+    ========================= -->
+
+    <div class="flag">
+
+        <div class="stripe saffron"></div>
+
+        <div class="stripe white"></div>
+
+        <div class="stripe green"></div>
+
+
+        <!-- Ashoka Chakra -->
+
+        <div class="ashoka">
+
+            <div class="spoke spoke1"></div>
+
+            <div class="spoke spoke2"></div>
+
+            <div class="spoke spoke3"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         MESSAGE
+    ========================= -->
+
+    <div class="message">
+
+
+        <div class="highlight">
+            🇮🇳 जय हिन्द 🇮🇳
+        </div>
+
+
+        <br>
+
+
+        आज हम अपने देश की आज़ादी का
+        गौरवपूर्ण उत्सव मनाते हैं।
+
+
+        <br>
+
+
+        हमारे देश की एकता, अखंडता और
+        भाईचारा हमेशा मजबूत बना रहे।
+
+
+        <br><br>
+
+
+        <b>
+            भारत माता की जय! 🇮🇳
+        </b>
+
+    </div>
+
+
+    <!-- =========================
+         BUTTON
+    ========================= -->
+
+    <button onclick="showMessage()">
+
+        🇮🇳 Special Message 🇮🇳
+
+    </button>
+
+
+    <!-- =========================
+         SPECIAL MESSAGE
+    ========================= -->
+
+    <div id="special">
+
+
+        ❤️ <b>मेरे प्यारे भारतवासियों के लिए</b> ❤️
+
+
+        <br><br>
+
+
+        हमारा भारत विविधताओं में एकता का
+        सबसे सुंदर उदाहरण है।
+
+
+        <br>
+
+
+        आइए हम सभी मिलकर अपने देश को
+        और बेहतर बनाने का संकल्प लें।
+
+
+        <br><br>
+
+
+        <b>
+            वंदे मातरम् 🇮🇳
+        </b>
+
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <div class="footer">
+
+
+        🇮🇳 स्वतंत्रता दिवस की हार्दिक शुभकामनाएँ 🇮🇳
+
+
+        <br><br>
+
+
+        Made with ❤️ for India
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function showMessage(){
+
+    let box =
+        document.getElementById("special");
+
+
+    if(box.style.display === "block"){
+
+        box.style.display = "none";
+
+    }
+
+    else{
+
+        box.style.display = "block";
+
+        box.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
