@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:"Segoe UI",sans-serif;
+    background:
+        radial-gradient(circle at 50% 35%,#4b0738 0%,#180018 35%,#050005 75%);
+    color:white;
+}
+
+/* Background stars */
+.stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    box-shadow:0 0 10px white;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;transform:scale(.5);}
+    to{opacity:1;transform:scale(1.4);}
+}
+
+/* Main */
+.container{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* Glow */
+.glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,0,130,.18);
+    filter:blur(80px);
+}
+
+/* Card */
+.card{
+    position:relative;
+    z-index:10;
+    width:min(90%,650px);
+    padding:45px 25px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 0 40px rgba(255,0,120,.25),
+        inset 0 0 30px rgba(255,255,255,.04);
+
+    animation:cardAppear 2s ease;
+}
+
+@keyframes cardAppear{
+    from{
+        opacity:0;
+        transform:scale(.7) translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+/* Top heart */
+.big-heart{
+    font-size:65px;
+    animation:heartBeat 1.2s infinite;
+    filter:drop-shadow(0 0 20px #ff2b91);
+}
+
+@keyframes heartBeat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+/* Heading */
+h1{
+    margin-top:15px;
+    font-size:clamp(38px,8vw,70px);
+    font-weight:800;
+
+    background:linear-gradient(
+        90deg,
+        #ff5fa2,
+        #fff,
+        #ff2f8a,
+        #ffd1e5
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    background-size:300%;
+    animation:textShine 4s infinite linear;
+}
+
+@keyframes textShine{
+    from{background-position:0%;}
+    to{background-position:300%;}
+}
+
+.subtitle{
+    margin-top:10px;
+    font-size:23px;
+    color:#ffd7e9;
+}
+
+.name{
+    margin-top:12px;
+    font-size:38px;
+    font-weight:bold;
+    color:#ff7bb8;
+    text-shadow:
+        0 0 10px #ff2387,
+        0 0 30px #ff2387;
+}
+
+/* Message */
+.message{
+    margin:25px auto;
+    max-width:520px;
+    line-height:1.8;
+    font-size:17px;
+    color:#ffeaf4;
+}
+
+.message span{
+    color:#ff79b7;
+    font-weight:bold;
+}
+
+/* Cake */
+.cake{
+    position:relative;
+    width:170px;
+    height:100px;
+    margin:40px auto 10px;
+}
+
+.layer{
+    position:absolute;
+    left:0;
+    width:170px;
+    height:45px;
+    border-radius:12px;
+    background:linear-gradient(#ff79ad,#d92b70);
+    box-shadow:0 8px 15px rgba(255,0,100,.3);
+}
+
+.layer.one{
+    bottom:0;
+}
+
+.layer.two{
+    bottom:35px;
+    width:140px;
+    left:15px;
+}
+
+.cream{
+    position:absolute;
+    bottom:67px;
+    left:30px;
+    width:110px;
+    height:18px;
+    background:#fff;
+    border-radius:50%;
+}
+
+/* Candle */
+.candle{
+    position:absolute;
+    bottom:80px;
+    left:77px;
+    width:16px;
+    height:45px;
+    background:linear-gradient(#fff,#ff8bbb);
+    border-radius:4px;
+}
+
+.flame{
+    position:absolute;
+    top:-27px;
+    left:1px;
+    width:14px;
+    height:25px;
+    background:#ffd45c;
+    border-radius:50% 50% 50% 50%;
+    box-shadow:
+        0 0 10px #ffb300,
+        0 0 25px #ff7b00;
+    animation:flame 0.7s infinite alternate;
+}
+
+@keyframes flame{
+    from{
+        transform:scale(.8) rotate(-5deg);
+    }
+    to{
+        transform:scale(1.15) rotate(5deg);
+    }
+}
+
+/* Button */
+button{
+    margin-top:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ff267f,#ff65aa);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+
+    box-shadow:
+        0 0 15px rgba(255,30,130,.5),
+        0 0 35px rgba(255,30,130,.25);
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:
+        0 0 25px rgba(255,30,130,.8),
+        0 0 50px rgba(255,30,130,.4);
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    bottom:-50px;
+    font-size:25px;
+    color:#ff4d9a;
+    filter:drop-shadow(0 0 8px #ff1681);
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) scale(.5) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-115vh) scale(1.3) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Fireworks */
+.firework{
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#ff80bd;
+    box-shadow:
+        0 -70px #ff80bd,
+        50px -50px #fff,
+        70px 0 #ff80bd,
+        50px 50px #fff,
+        0 70px #ff80bd,
+        -50px 50px #fff,
+        -70px 0 #ff80bd,
+        -50px -50px #fff;
+
+    animation:explode 2s infinite;
+}
+
+.f1{
+    top:20%;
+    left:15%;
+}
+
+.f2{
+    top:25%;
+    right:15%;
+    animation-delay:1s;
+}
+
+@keyframes explode{
+    0%,100%{
+        transform:scale(.2);
+        opacity:.2;
+    }
+
+    50%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Footer */
+.from{
+    margin-top:20px;
+    color:#ffc2dd;
+    font-size:15px;
+}
+
+.from strong{
+    color:#ff6eae;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    .card{
+        padding:30px 18px;
+    }
+
+    .big-heart{
+        font-size:50px;
+    }
+
+    .subtitle{
+        font-size:18px;
+    }
+
+    .name{
+        font-size:30px;
+    }
+
+    .message{
+        font-size:15px;
+    }
+
+    .cake{
+        transform:scale(.85);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Stars -->
+<div class="stars">
+
+    <span class="star" style="top:10%;left:10%;"></span>
+    <span class="star" style="top:20%;left:25%;animation-delay:.5s"></span>
+    <span class="star" style="top:15%;left:70%;animation-delay:1s"></span>
+    <span class="star" style="top:30%;left:90%;animation-delay:1.5s"></span>
+    <span class="star" style="top:70%;left:8%;animation-delay:.8s"></span>
+    <span class="star" style="top:80%;left:25%;animation-delay:1.2s"></span>
+    <span class="star" style="top:75%;left:80%;animation-delay:.4s"></span>
+    <span class="star" style="top:60%;left:92%;animation-delay:1.7s"></span>
+
+</div>
+
+<!-- Fireworks -->
+<div class="firework f1"></div>
+<div class="firework f2"></div>
+
+<div class="container">
+
+    <div class="glow"></div>
+
+    <div class="card">
+
+        <div class="big-heart">❤️</div>
+
+        <h1>Happy Birthday</h1>
+
+        <!-- GF का नाम यहां लिखो -->
+        <div class="Dipesh">
+            GF_NAME ❤️
+        </div>
+
+        <div class="subtitle">
+            The most special person in my life ✨
+        </div>
+
+        <div class="cake">
+
+            <div class="layer one"></div>
+            <div class="layer two"></div>
+            <div class="cream"></div>
+
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+
+        </div>
+
+        <div class="message">
+
+            Today is not just another day... ❤️<br>
+
+            It's the day someone very special
+            came into this world.
+
+            <br><br>
+
+            <span>
+                Happy Birthday, my love! 💕
+            </span>
+
+            <br><br>
+
+            May your smile always stay this beautiful,
+            your dreams come true,
+            and every day of your life be filled
+            with happiness. ✨
+
+            <br><br>
+
+            You are truly special to me. ❤️
+
+        </div>
+
+        <button onclick="document.getElementById('love').play()">
+            💖 Click For A Surprise 💖
+        </button>
+
+        <div class="from">
+            Made with ❤️ by <strong>Dipesh</strong>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Floating hearts -->
+
+<div class="heart" style="left:5%;animation-duration:8s;">❤️</div>
+<div class="heart" style="left:15%;animation-duration:10s;animation-delay:2s;">💗</div>
+<div class="heart" style="left:28%;animation-duration:7s;animation-delay:1s;">💕</div>
+<div class="heart" style="left:42%;animation-duration:11s;animation-delay:3s;">❤️</div>
+<div class="heart" style="left:58%;animation-duration:8s;animation-delay:2s;">💖</div>
+<div class="heart" style="left:72%;animation-duration:10s;animation-delay:4s;">💕</div>
+<div class="heart" style="left:85%;animation-duration:7s;animation-delay:1s;">❤️</div>
+<div class="heart" style="left:94%;animation-duration:9s;animation-delay:3s;">💗</div>
+
+<audio id="love" preload="auto">
+</audio>
+
+</body>
+</html>
