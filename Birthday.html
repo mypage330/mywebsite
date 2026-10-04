@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Dipesh 🎂</title>
+
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    font-family:"Segoe UI",Arial,sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #4b0738 0%,
+            #180018 35%,
+            #050005 75%
+        );
+
+    color:white;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:1;
+}
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 10px white;
+
+    animation:
+        twinkle 2s infinite alternate;
+}
+
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.4);
+    }
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 15px;
+
+    z-index:5;
+}
+
+
+/* =========================
+   GLOW
+========================= */
+
+.glow{
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,0,130,.18);
+
+    filter:blur(80px);
+
+    z-index:0;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+    position:relative;
+
+    z-index:10;
+
+    width:min(92%,650px);
+
+    margin:30px auto;
+
+    padding:45px 25px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+
+        0 0 40px
+        rgba(255,0,120,.25),
+
+        inset 0 0 30px
+        rgba(255,255,255,.04);
+
+    animation:
+        cardAppear 2s ease;
+}
+
+
+@keyframes cardAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.7)
+            translateY(50px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart{
+
+    font-size:65px;
+
+    animation:
+        heartBeat 1.2s infinite;
+
+    filter:
+        drop-shadow(
+            0 0 20px #ff2b91
+        );
+}
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1{
+
+    margin-top:15px;
+
+    font-size:
+        clamp(
+            38px,
+            9vw,
+            70px
+        );
+
+    font-weight:800;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff5fa2,
+            #fff,
+            #ff2f8a,
+            #ffd1e5
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    background-size:300%;
+
+    animation:
+        textShine 4s infinite linear;
+}
+
+
+@keyframes textShine{
+
+    from{
+        background-position:0%;
+    }
+
+    to{
+        background-position:300%;
+    }
+
+}
+
+
+/* =========================
+   NAME
+========================= */
+
+.name{
+
+    margin-top:15px;
+
+    font-size:
+        clamp(
+            35px,
+            10vw,
+            55px
+        );
+
+    font-weight:bold;
+
+    color:#ff7bb8;
+
+    text-shadow:
+
+        0 0 10px #ff2387,
+
+        0 0 30px #ff2387,
+
+        0 0 50px #ff2387;
+
+    animation:
+        nameGlow 2s infinite alternate;
+}
+
+
+@keyframes nameGlow{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.06);
+    }
+
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle{
+
+    margin-top:10px;
+
+    font-size:21px;
+
+    color:#ffd7e9;
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake{
+
+    position:relative;
+
+    width:170px;
+
+    height:100px;
+
+    margin:45px auto 15px;
+}
+
+
+.layer{
+
+    position:absolute;
+
+    left:0;
+
+    width:170px;
+
+    height:45px;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            #ff79ad,
+            #d92b70
+        );
+
+    box-shadow:
+        0 8px 15px
+        rgba(255,0,100,.3);
+}
+
+
+.layer.one{
+    bottom:0;
+}
+
+
+.layer.two{
+
+    bottom:35px;
+
+    width:140px;
+
+    left:15px;
+}
+
+
+.cream{
+
+    position:absolute;
+
+    bottom:67px;
+
+    left:30px;
+
+    width:110px;
+
+    height:18px;
+
+    background:white;
+
+    border-radius:50%;
+}
+
+
+/* CANDLE */
+
+.candle{
+
+    position:absolute;
+
+    bottom:80px;
+
+    left:77px;
+
+    width:16px;
+
+    height:45px;
+
+    background:
+        linear-gradient(
+            #fff,
+            #ff8bbb
+        );
+
+    border-radius:4px;
+}
+
+
+.flame{
+
+    position:absolute;
+
+    top:-27px;
+
+    left:1px;
+
+    width:14px;
+
+    height:25px;
+
+    background:#ffd45c;
+
+    border-radius:50%;
+
+    box-shadow:
+
+        0 0 10px #ffb300,
+
+        0 0 25px #ff7b00;
+
+    animation:
+        flame .7s infinite alternate;
+}
+
+
+@keyframes flame{
+
+    from{
+
+        transform:
+            scale(.8)
+            rotate(-5deg);
+    }
+
+    to{
+
+        transform:
+            scale(1.15)
+            rotate(5deg);
+    }
+
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message{
+
+    margin:25px auto;
+
+    max-width:540px;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    color:#ffeaf4;
+}
+
+
+.message span{
+
+    color:#ff79b7;
+
+    font-weight:bold;
+
+    font-size:20px;
+}
+
+
+/* =========================
+   SURPRISE BUTTON
+========================= */
+
+button{
+
+    margin-top:25px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff267f,
+            #ff65aa
+        );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(255,30,130,.5),
+
+        0 0 35px
+        rgba(255,30,130,.25);
+
+    transition:.3s;
+}
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255,30,130,.8),
+
+        0 0 50px
+        rgba(255,30,130,.4);
+}
+
+
+/* =========================
+   SURPRISE MESSAGE
+========================= */
+
+#surpriseMessage{
+
+    display:none;
+
+    margin:25px auto 0;
+
+    max-width:500px;
+
+    padding:22px 18px;
+
+    border-radius:20px;
+
+    background:
+
+        rgba(255,45,140,.15);
+
+    border:
+
+        1px solid
+        rgba(255,150,210,.4);
+
+    color:#ffd1e5;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255,0,130,.3);
+}
+
+
+@keyframes surpriseIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.5)
+            translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    font-size:25px;
+
+    color:#ff4d9a;
+
+    filter:
+        drop-shadow(
+            0 0 8px #ff1681
+        );
+
+    animation:
+        floatUp linear infinite;
+
+    z-index:4;
+}
+
+
+@keyframes floatUp{
+
+    0%{
+
+        transform:
+            translateY(0)
+            scale(.5)
+            rotate(0);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+            translateY(-115vh)
+            scale(1.3)
+            rotate(360deg);
+
+        opacity:0;
+    }
+
+}
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+.firework{
+
+    position:absolute;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    background:#ff80bd;
+
+    box-shadow:
+
+        0 -70px #ff80bd,
+
+        50px -50px #fff,
+
+        70px 0 #ff80bd,
+
+        50px 50px #fff,
+
+        0 70px #ff80bd,
+
+        -50px 50px #fff,
+
+        -70px 0 #ff80bd,
+
+        -50px -50px #fff;
+
+    animation:
+        explode 2s infinite;
+}
+
+
+.f1{
+
+    top:20%;
+
+    left:15%;
+}
+
+
+.f2{
+
+    top:25%;
+
+    right:15%;
+
+    animation-delay:1s;
+}
+
+
+@keyframes explode{
+
+    0%,100%{
+
+        transform:scale(.2);
+
+        opacity:.2;
+    }
+
+    50%{
+
+        transform:scale(1);
+
+        opacity:1;
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.from{
+
+    margin-top:25px;
+
+    color:#ffc2dd;
+
+    font-size:15px;
+}
+
+
+.from strong{
+
+    color:#ff6eae;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .container{
+
+        align-items:flex-start;
+
+        padding-top:20px;
+
+        padding-bottom:40px;
+    }
+
+
+    .card{
+
+        padding:
+            30px 18px 35px;
+
+        margin:
+            15px auto 30px;
+    }
+
+
+    .big-heart{
+
+        font-size:50px;
+    }
+
+
+    .subtitle{
+
+        font-size:18px;
+    }
+
+
+    .message{
+
+        font-size:15px;
+    }
+
+
+    .message span{
+
+        font-size:18px;
+    }
+
+
+    .cake{
+
+        transform:scale(.85);
+
+        margin-top:35px;
+    }
+
+
+    button{
+
+        width:90%;
+
+        font-size:16px;
+    }
+
+
+    #surpriseMessage{
+
+        font-size:16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     STARS
+========================= -->
+
+<div class="stars">
+
+    <span class="star"
+        style="top:10%;left:10%;">
+    </span>
+
+    <span class="star"
+        style="top:20%;left:25%;
+        animation-delay:.5s">
+    </span>
+
+    <span class="star"
+        style="top:15%;left:70%;
+        animation-delay:1s">
+    </span>
+
+    <span class="star"
+        style="top:30%;left:90%;
+        animation-delay:1.5s">
+    </span>
+
+    <span class="star"
+        style="top:70%;left:8%;
+        animation-delay:.8s">
+    </span>
+
+    <span class="star"
+        style="top:80%;left:25%;
+        animation-delay:1.2s">
+    </span>
+
+    <span class="star"
+        style="top:75%;left:80%;
+        animation-delay:.4s">
+    </span>
+
+    <span class="star"
+        style="top:60%;left:92%;
+        animation-delay:1.7s">
+    </span>
+
+</div>
+
+
+<!-- FIREWORKS -->
+
+<div class="firework f1"></div>
+
+<div class="firework f2"></div>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<div class="container">
+
+    <div class="glow"></div>
+
+
+    <div class="card">
+
+
+        <!-- HEART -->
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+
+        <!-- NAME -->
+
+        <div class="name">
+            DIPESH ❤️
+        </div>
+
+
+        <div class="subtitle">
+
+            Today is your special day ✨
+
+        </div>
+
+
+        <!-- CAKE -->
+
+        <div class="cake">
+
+            <div class="layer one"></div>
+
+            <div class="layer two"></div>
+
+            <div class="cream"></div>
+
+
+            <div class="candle">
+
+                <div class="flame"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="message">
+
+            Today is your day, Dipesh... 🎂
+            <br>
+
+            A day to celebrate you,
+            your dreams, your journey,
+            and all the amazing moments
+            waiting for you ahead. ✨
+
+            <br><br>
+
+
+            <span>
+                Happy Birthday, Dipesh! 🎉❤️
+            </span>
+
+
+            <br><br>
+
+
+            May this new year of your life
+            bring you happiness, success,
+            good memories, and countless
+            reasons to smile. 🌟
+
+            <br><br>
+
+
+            Keep believing in yourself,
+            keep chasing your dreams,
+            and never stop being the person
+            who makes every moment special. 💫
+
+            <br><br>
+
+
+            Wishing you an unforgettable
+            birthday and an even more
+            amazing year ahead! 🎂✨
+
+        </div>
+
+
+        <!-- SURPRISE BUTTON -->
+
+        <button
+            id="surpriseBtn"
+            onclick="showSurprise()">
+
+            🎁 Click For A Surprise 🎁
+
+        </button>
+
+
+        <!-- SURPRISE -->
+
+        <div id="surpriseMessage">
+
+           
+            <br><br>
+
+            💖 Keep smiling,
+            keep dreaming,
+            and make this year
+            unforgettable! ❤️
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="from">
+
+            Made with ❤️ for
+
+            <strong>
+                Dipesh
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FLOATING HEARTS
+========================= -->
+
+<div class="heart"
+    style="left:5%;
+    animation-duration:8s;">
+    ❤️
+</div>
+
+<div class="heart"
+    style="left:15%;
+    animation-duration:10s;
+    animation-delay:2s;">
+    💗
+</div>
+
+<div class="heart"
+    style="left:28%;
+    animation-duration:7s;
+    animation-delay:1s;">
+    💕
+</div>
+
+<div class="heart"
+    style="left:42%;
+    animation-duration:11s;
+    animation-delay:3s;">
+    ❤️
+</div>
+
+<div class="heart"
+    style="left:58%;
+    animation-duration:8s;
+    animation-delay:2s;">
+    💖
+</div>
+
+<div class="heart"
+    style="left:72%;
+    animation-duration:10s;
+    animation-delay:4s;">
+    💕
+</div>
+
+<div class="heart"
+    style="left:85%;
+    animation-duration:7s;
+    animation-delay:1s;">
+    ❤️
+</div>
+
+<div class="heart"
+    style="left:94%;
+    animation-duration:9s;
+    animation-delay:3s;">
+    💗
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function showSurprise(){
+
+    const message =
+        document.getElementById(
+            "surpriseMessage"
+        );
+
+    const button =
+        document.getElementById(
+            "surpriseBtn"
+        );
+
+
+    /* Message show */
+
+    message.style.display =
+        "block";
+
+
+    /* Animation */
+
+    message.style.animation =
+        "surpriseIn 1s ease";
+
+
+    /* Button change */
+
+    button.innerHTML =
+        "💖 Surprise Opened 💖";
+
+
+    /* Disable button */
+
+    button.disabled =
+        true;
+
+
+    button.style.opacity =
+        "0.8";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
